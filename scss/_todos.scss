@@ -1,0 +1,37 @@
+/* ========== todos ========== */
+
+#todo_form {
+  input {
+  }
+}
+#todo_list {
+  li {
+    span {
+    }
+  }
+}
+
+#dday {
+  margin: 40px 0;
+  .dday_title {
+    margin-bottom: 10px;
+    span {
+      color: $point2;
+      margin-left: 5px;
+    }
+  }
+  .dday_wrap {
+    width: 100%;
+    border-radius: 10px;
+    background-color: $white;
+    padding: 30px 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.14);
+    .dday_day {
+    }
+    .ddayTime {
+      padding: 10px 0;
+    }
+    .ddayText {
+    }
+  }
+}

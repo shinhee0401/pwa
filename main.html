@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main</title>
+  <link rel="shortcut icon" href="img/student.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  
+  <div class="container home">
+    <header>
+      <h1>
+        <a href="#">
+          <span>CHWEDU</span>
+        </a>
+      </h1>
+      <div class="top_left">
+        <button>
+          <span class="ico_alarm"> <a href=""><img src="./img/alarm.png" alt=""></a></span>
+        </button>
+      </div>
+      <div class="top_right">
+        <button class="gnb_btn">
+          <span class="ico_gnb_menu">
+          <img src="./img/menu.png" alt="">
+          </span>
+        </button>
+      </div>
+    </header>
+
+
+    <!--  -->
+		<div class="dark"></div>
+
+		<!-- gnb -->
+		<div id="gnb">
+			<div class="inner">
+				<!-- <div class="info_user">
+					<a href="#" class="info_login login_require"><u>로그인</u>이 필요해요!</a>
+				</div> -->
+				<ul class="list_menu">
+					<li class="line">
+						<p class="user_name btn_menu">
+              OOO 님<br>안녕하세요.
+            </p>
+					</li>
+					<li>
+						<a href="#" class="btn_menu"> <img src="./img/mortarboard.png" alt=""> <span>학원안내</span></a>
+					</li>
+					<li>
+						<a href="#" class="btn_menu"> <img src="./img/teacher.png" alt=""> <span>강사소개</span></a>
+					</li>
+					<li>
+						<a href="#" class="btn_menu"> <img src="./img/blackboard.png" alt=""> <span>강좌소개</span></a>
+					</li>
+					<li>
+						<a href="#" class="btn_menu"> <img src="./img/calendar.png" alt=""> <span>시간표</span></a>
+					</li>
+					<li>
+						<a href="#" class="btn_menu"> <img src="./img/notice.png" alt=""> <span>공지사항</span></a>
+					</li>
+					<li>
+						<a href="#" class="btn_menu"> <img src="./img/event.png" alt=""> <span>이벤트</span></a>
+					</li>
+				</ul>
+
+				<div class="login">
+					<a href="#"><span class="ico_gnb_lock"></span> 로그인</a>
+				</div>
+			</div>
+		</div>
+
+    <!-- main -->
+    <div class="contents">  
+      <!-- 메인슬라이드배너 -->
+      <div id="slide">
+        <img src="./img/main01.png" alt="">
+      </div>
+      <!-- 수능디데이 -->
+      <div id="dday">
+        <h3 class="dday_title">2024 수능<span>D-day</span></h3>
+        <div class="dday_wrap">
+          <p class="dday_day">2023년 11월 16일까지</p>
+          <h2 class="ddayTime"></h2>
+          <span class="ddayText">남았습니다.</span>
+        </div>
+      </div>
+      
+      <!-- 할일, 스톱워치 바로가기 버튼 -->
+      <div id="everyday">
+        <div class="every_wrap">
+          <a href="/sub/stopwatch.html">
+            <div class="timer">
+              <img src="img/stopwatch.png" alt="스톱워치">
+              <p>스톱워치</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="todo">
+              <img src="img/check-box.png" alt="todo">
+              <p>TO DO</p>
+            </div>
+          </a>
+        </div>
+      </div>
+  
+      <a href="sub/calendar.html">달력</a>
+      <a href="sub/todo.html">todo</a>
+      <a href="sub/stopwatch.html">스탑워치</a>
+  </div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+
+<script defer src="./sub/js/dday.js"></script>
+</html>

@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header,
+main,
+section,
+aside,
+article,
+footer,
+nav,
+menu,
+details,
+figure,
+figcaption {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+/* ========== common ========== */
+.container {
+  max-width: 640px;
+  min-width: 270px;
+  margin: 0 auto;
+  background: white;
+  position: relative;
+}
+
+/* ========== home(main.html) ========== */
+.home {
+  background-color: #f0f4f7;
+}
+
+.contents {
+  padding: 20px;
+}
+
+header {
+  position: relative;
+  max-width: 640px;
+  min-width: 270px;
+  margin: 0 auto;
+  height: 60px;
+  line-height: 60px;
+}
+header h1 {
+  text-align: center;
+  line-height: 60px;
+}
+header h1 a {
+  display: inline-block;
+  width: 147px;
+  height: 24px;
+}
+header h1 a span {
+  display: none;
+}
+header button {
+  background: transparent;
+  border: none;
+}
+header .top_left {
+  position: absolute;
+  top: 0px;
+  left: 12px;
+}
+header .top_left .ico_alarm img {
+  width: 29px;
+}
+header .top_right {
+  position: absolute;
+  top: 0px;
+  right: 12px;
+}
+header .top_right img {
+  width: 26px;
+}
+
+/*  */
+.dark {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: none;
+}
+
+/* gnb */
+#gnb {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -243px;
+  width: 243px;
+  border-radius: 20px 0 0 20px;
+  background-color: white;
+  overflow: hidden;
+  z-index: 9999;
+}
+#gnb .inner {
+  width: 243px;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 17px;
+  box-sizing: content-box;
+}
+#gnb .inner .info_user {
+  padding: 32px 24px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#gnb .inner .info_user .info_login {
+  font-weight: bold;
+  letter-spacing: -1.8px;
+}
+#gnb .inner .info_user .info_inquiry {
+  font-size: 13px;
+  letter-spacing: -0.5px;
+}
+#gnb .inner .list_menu li {
+  padding: 15px 0;
+}
+#gnb .inner .list_menu li a {
+  display: flex;
+  align-items: center;
+}
+#gnb .inner .list_menu li a img {
+  width: 26px;
+}
+#gnb .inner .list_menu li a span {
+  margin-left: 10px;
+  margin-top: 2px;
+}
+#gnb .inner .list_menu li.line {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eff0f2;
+}
+#gnb .inner .btn_menu {
+  position: relative;
+  width: 100%;
+  padding: 0 24px;
+  text-align: left;
+  color: #111;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.login a {
+  display: block;
+  text-align: center;
+  padding: 25px;
+}
+
+.login .ico_gnb_lock {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-position: -560px -20px;
+  vertical-align: top;
+}
+
+/* ========== slide_banner ========== */
+#slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ========== everyday_button ========== */
+#everyday .every_wrap {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+#everyday .every_wrap .timer,
+#everyday .every_wrap .todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+#everyday .every_wrap .timer img,
+#everyday .every_wrap .todo img {
+  width: 30px;
+  margin: 0 auto;
+}
+#everyday .every_wrap .timer p,
+#everyday .every_wrap .todo p {
+  color: #444;
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+/* ========== progress ========== */
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 10001;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #e3ecff;
+  transition: 0.6s cubic-bezier(0.42, 0, 0.13, 1.04) 1s;
+}
+.progress .loading {
+  width: 60%;
+  max-width: 60vw;
+  height: 22vw;
+  border-radius: 1rem;
+  display: flex;
+  background: #115cff;
+  justify-content: center;
+  align-items: flex-end;
+}
+.progress .loading img {
+  width: 40%;
+  animation: loadImg 0.5s infinite alternate cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.progress .progress-text {
+  margin-top: 7%;
+  margin-left: 1%;
+  font-size: 5vw;
+  color: #115cff;
+}
+
+.progress.active {
+  /*	top: -120%;*/
+  /*	opacity: 0;*/
+  transform: scale(0);
+  opacity: 0;
+}
+
+@keyframes loadImg {
+  from {
+    transform: translateY(-3%);
+  }
+  to {
+    transform: translateY(3%);
+  }
+}
+/* ========== login ========== */
+#login {
+  background-color: #e3ecff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#login .login_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#login .login_wrapper .login_logo {
+  text-align: center;
+}
+#login .login_wrapper .login_logo img {
+  width: 30%;
+  margin: 3vh 0;
+}
+#login .login_wrapper .login_form {
+  width: 60%;
+}
+#login .login_wrapper .login_form .login_text {
+  width: 100%;
+  padding: 1.2rem 1rem;
+  margin: 0.6rem 0;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.2rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  color: #444;
+}
+#login .login_wrapper .login_form .login_btn {
+  width: 100%;
+  padding: 1.2rem 1rem;
+  margin: 0.6rem 0;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.2rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  background-color: #444;
+  color: #ffffff;
+  margin-top: 3rem;
+}
+#login .login_wrapper .login_bottom {
+  margin-top: 4rem;
+  color: #adadad;
+}
+
+/* ========== stopwatch ========== */
+#stopwatch {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.stopwatchTitle {
+  text-align: center;
+  font-size: 24px;
+  color: #444;
+}
+
+.watch {
+  width: 100%;
+  text-align: center;
+  background-color: #4498f2;
+  margin: 50px auto;
+  padding: 40px 5px;
+  border-radius: 1rem;
+}
+.watch .time {
+  font-size: 42px;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.controls button {
+  padding: 12px 8px;
+  margin: 0 4px;
+  border: none;
+  appearance: none;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  color: #111;
+  background-color: #ffffff;
+  transition: 0.2s;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.controls button:hover {
+  opacity: 0.7;
+}
+.controls button:active {
+  background-color: #115cff;
+  color: #ffffff;
+}
+
+#recordsCover {
+  width: 100%;
+  margin: auto;
+}
+#recordsCover #recordList {
+  text-align: left;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+#recordsCover #recordList li {
+  list-style: none;
+  background: #e3ecff;
+  padding: 0.5rem;
+  margin: 0.4rem 0;
+  border-radius: 8px;
+}
+
+/* ========== todos ========== */
+#dday {
+  margin: 40px 0;
+}
+#dday .dday_title {
+  margin-bottom: 10px;
+}
+#dday .dday_title span {
+  color: #4498f2;
+  margin-left: 5px;
+}
+#dday .dday_wrap {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.14);
+}
+#dday .dday_wrap .ddayTime {
+  padding: 10px 0;
+}
+
+/*# sourceMappingURL=main.css.map */
