@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -210,6 +211,36 @@ header .top_right img {
   margin-top: 5px;
 }
 
+/* ========== word(영단어 랜덤) ========== */
+#englishword .word_title {
+  margin-bottom: 10px;
+}
+#englishword .word_title span {
+  color: #4498f2;
+  margin-left: 5px;
+}
+#englishword .word {
+  width: 100%;
+  border-radius: 10px;
+  background-image: linear-gradient(to top, #6040e4, #62abff);
+  padding: 30px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.14);
+}
+#englishword .word span {
+  color: #ffffff;
+  display: block;
+}
+#englishword .word span:nth-child(1) {
+  letter-spacing: 2px;
+  font-size: 28px;
+  font-weight: 800;
+}
+#englishword .word span:nth-child(2) {
+  margin-top: 10px;
+  font-size: 21px;
+  font-weight: 300;
+}
+
 /* ========== progress ========== */
 .progress {
   position: absolute;
@@ -400,7 +431,7 @@ header .top_right img {
   width: 100%;
   border-radius: 10px;
   background-color: #ffffff;
-  padding: 30px 20px;
+  padding: 30px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.14);
 }
 #dday .dday_wrap .ddayTime {
