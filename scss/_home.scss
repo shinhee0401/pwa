@@ -17,15 +17,13 @@ header {
   max-width: 640px;
   min-width: 270px;
   margin: 0 auto;
-  height: 60px;
-  line-height: 60px;
+  height: 75px;
+  line-height: 70px;
   h1 {
     text-align: center;
-    line-height: 60px;
+    line-height: 70px;
     a {
       display: inline-block;
-      width: 147px;
-      height: 24px;
       span {
         display: none;
       }
@@ -49,7 +47,7 @@ header {
     @include header_top();
     right: 12px;
     img {
-      width: 26px;
+      width: 24px;
     }
   }
 }
@@ -91,6 +89,7 @@ header {
       .info_login {
         font-weight: bold;
         letter-spacing: -1.8px;
+        color: $point;
       }
       .info_inquiry {
         font-size: 13px;
@@ -103,12 +102,15 @@ header {
         a {
           display: flex;
           align-items: center;
+          i {
+            font-size: 21px;
+            color: $gray2;
+          }
           img {
             width: 26px;
           }
           span {
             margin-left: 10px;
-            margin-top: 2px;
           }
         }
       }
@@ -148,10 +150,126 @@ header {
 }
 
 /* ========== slide_banner ========== */
-#slide {
-  img {
+.slide {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  user-select: none;
+  .slide_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0px;
     width: 100%;
+    height: 408px;
+    flex-shrink: 0;
+    transition: left 0.15s;
     border-radius: 10px;
+  }
+}
+.slide_item.item1 {
+  width: 100%;
+  background: url("/img/main01.jpg");
+  background-size: cover;
+}
+.slide_item.item2 {
+  background: url("/img/main02.png");
+  background-size: cover;
+}
+.slide_item.item3 {
+  background: url("/img/main03.jpeg");
+  background-size: cover;
+}
+/* 페이지네이션 스타일 */
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.slide_pagination {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slide_pagination > li {
+  /* 현재 슬라이드가 아닌 것은 투명도 부여 */
+  color: $point1;
+  cursor: pointer;
+  font-size: 25px;
+}
+.slide_pagination > li.active {
+  /* 현재 슬라이드 색상은 투명도 없이 */
+  color: $point;
+}
+
+.slide_item_duplicate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0px;
+  width: 100%;
+  height: 300px;
+  flex-shrink: 0;
+  transition: left 0.15s;
+}
+
+/* ========== 출석체크/시간표  ========== */
+
+@mixin button_wrap($bgcolor) {
+  width: 50%;
+  background-color: $bgcolor;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.14);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: $white;
+  cursor: pointer;
+}
+
+#check_schedule {
+  margin-top: 40px;
+  h3 {
+    color: $font-color3;
+  }
+  .check_schedule_wrap {
+    display: flex;
+    gap: 10px;
+    .check {
+      @include button_wrap($bgcolor: #64aaf5);
+      a {
+        color: $white;
+        i {
+          font-size: 21px;
+        }
+        p {
+          margin-top: 10px;
+        }
+      }
+    }
+    .schedule {
+      @include button_wrap($bgcolor: #604ce6);
+      a {
+        color: $white;
+        i {
+          font-size: 21px;
+        }
+        p {
+          margin-top: 10px;
+        }
+      }
+    }
   }
 }
 
@@ -162,12 +280,21 @@ header {
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    a {
+      width: 40%;
+      color: $gray2;
+      font-size: 24px;
+    }
+    .timer {
+      border-right: 2px solid #ecedf1;
+    }
     .timer,
     .todo {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-content: center;
+      width: 100%;
       img {
         width: 30px;
         margin: 0 auto;
@@ -175,7 +302,7 @@ header {
       p {
         color: $gray2;
         font-size: 1.1rem;
-        margin-top: 5px;
+        margin-top: 10px;
       }
     }
   }
@@ -183,6 +310,7 @@ header {
 
 /* ========== word(영단어 랜덤) ========== */
 #englishword {
+  margin: 40px 0;
   .word_title {
     margin-bottom: 10px;
     span {
@@ -200,9 +328,9 @@ header {
       color: $white;
       display: block;
       &:nth-child(1) {
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         font: {
-          size: 28px;
+          size: 26px;
           weight: 800;
         }
       }

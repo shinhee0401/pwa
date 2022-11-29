@@ -4,19 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TodoList</title>
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/sub.css">
-  <script src="https://kit.fontawesome.com/b1e1ca77fa.js" crossorigin="anonymous"></script>
+  <title>event</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/sub.css" />
+  <script defer src="js/event.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">				</script>
+<script defer src="../js/menu.js"></script>
+<script src="https://kit.fontawesome.com/b1e1ca77fa.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+  
   <div class="container">
-    
+
     <header>
       <h1>
         <a href="#">
-          <span>TO DO</span>
+          <span>이벤트</span>
         </a>
       </h1>
       <div class="top_left">
@@ -72,34 +75,52 @@
 				</div>
 			</div>
 		</div>
-
-    <div class="contents">
-      <h1 class="todoTitle">오늘 할 일 <span>CHECK</span></h1>
-      <form class="todo_form" autocomplete="off">
-        <button type="submit" class="submit_btn">Submit</button>
-        <input type="text" name="add_todo" placeholder="오늘 할 일 입력" />
-        <input type="text" name="hidden_item" hidden />
-      </form>
-  
-      <div class="todo-items-wrapper">
-        <ul class="todo-items"></ul>
-  
-        <div class="todo-footer">
-          <div class="left-items">5 Items</div>
-          <ul class="footer-menus">
-            <li class="all selected">All</li>
-            <li class="active">Active</li>
-            <li class="completed">Completed</li>
-          </ul>
-          <button class="clear-completed">Clear Completed</button>
-        </div>
-      </div>
+			
+		<div class="contents">
+      <div class="tab_menu">
+        <ul class="tab">
+            <li class="tab_item active">진행 중 이벤트</li>
+            <li class="tab_item">종료된 이벤트</li>
+        </ul>
+        <div class="tab_inner_wrap">
+            <div class="tab_inner active">
+              <div class="prog">
+                <p>총 3개</p>
+                <a href="#">
+                  <div class="prog_wrap">
+                    <img src="../img/event1.png" alt="event1">
+                    <h5>2023신학기</h5>
+                    <p>2023-01-09~2023-02-28</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="prog_wrap">
+                    <img src="../img/event2.png" alt="event2">
+                    <h5>겨울방학 특강 등록 이벤트 </h5>
+                    <p>2022-12-05~2022-12-16</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="prog_wrap">
+                    <img src="../img/event3.png" alt="event3">
+                    <h5>기말고사 만점 이벤트</h5>
+                    <p>2022-12-08~2022-12-21</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="tab_inner">
+              <div class="end">
+                <img src="../img/event_no.png" alt="event_no">
+                <p>현재 종료된 이벤트가 없습니다.</p>
+              </div>
+            </div>
+        </div>  
+      </div>  
     </div>
+
+
   </div>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="../js/menu.js"></script>
-<script defer src="./js/todo.js"></script>
 </body>
 </html>
